@@ -1,7 +1,7 @@
 # Sam Mayfield - Oct 2019
 
 class Character:
-    def __init__(self, name, cclass, health, attack, defense, critical, is_alive, games_played):
+    def __init__ (self, name, cclass, health, attack, defense, critical, is_alive, games_played):
         self.name = name
         self.cclass = cclass
         self.health = health
