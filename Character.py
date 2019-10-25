@@ -12,17 +12,16 @@ class Character:
         self.games_played = games_played
 
     def to_string (self):
-        if games_played >= 3:
+        if self.games_played >= 3:
             status = "UNAVAILABLE (Exhausted)"
-        elif not is_alive:
-            status = "UNAVAILABLE (Dead)\nGames Remaining: " + 3 - games_played
+        elif not self.is_alive:
+            status = "UNAVAILABLE (Dead)\nGames Remaining: " + (3 - self.games_played)
         else:
-            status = "AVAILABLE\nGames Remaining: " + 3 - games_played
+            status = "AVAILABLE\nGames Remaining: " + (3 - self.games_played)
 
-        return name + "\nClass: " + cclass + "\nHealth: " + health + "\nAttack: " + attack + "\nDefense: " + defense +\
-                "\nCritical: " + critical + "\nStatus: " + status
+        return self.name + "\nClass: " + self.cclass + "\nHealth: " + self.health + "\nAttack: " + self.attack + "\nDefense: " + self.defense +\
+                "\nCritical: " + self.critical + "\nStatus: " + status
 
     def simple_string (self):
-        return name + "\nClass: " + cclass + "\nHealth: " + health + "\nAttack: " + attack + "\nDefense: " + defense +\
-                "\nCritical: " + critical
-
+        return self.name + "\nClass: " + self.cclass + "\nHealth: " + self.health + "\nAttack: " + self.attack + "\nDefense: " + self.defense +\
+                "\nCritical: " + self.critical
