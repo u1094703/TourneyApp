@@ -46,4 +46,5 @@ class Team:
         i = 1
         for fella in self.characters:
             all_characters += "(" + i + ")\n" + fella.to_string + "\n\n"
+            i += 1
         return name + "\n\nWins: " + wins + "\nLosses: " + losses + "\n\n" + all_characters
